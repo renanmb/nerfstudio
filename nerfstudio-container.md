@@ -55,6 +55,10 @@ docker run --gpus all \                                         # Give the conta
             nerfstudio                                          # Docker image tag if you built the image from the Dockerfile by yourself using the command from above.
 ```
 
+```console
+docker run --gpus all -u $(id -u) -v ~/Documents/GitHub/Renanmb/nerfstudio/data:/workspace/ -v /home/goat/.cache/:/home/user/.cache/ -p 7007:7007 --rm -it --shm-size=12gb nerfstudio
+```
+
 ## Call nerfstudio commands directly
 Besides, the container can also directly be used by adding the nerfstudio command to the end.
 
